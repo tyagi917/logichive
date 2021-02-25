@@ -8,8 +8,8 @@ const Display=()=>{
     },[]);
 	const showdata=()=>{
 		 axios.get('http://localhost:5000/data/get').then(res=>{
-            console.log(res.data);
-            setData(res.data);
+            console.log(res.Data.data);
+            setData(res.Data.data);
 		
 	}
     return(
