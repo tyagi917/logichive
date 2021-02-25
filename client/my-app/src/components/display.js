@@ -3,11 +3,15 @@ import axios from 'axios'
 const Display=()=>{
     const[res,setData]=useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/data/get').then(res=>{
+       showData();
+   
+    },[]);
+	const showdata=()=>{
+		 axios.get('http://localhost:5000/data/get').then(res=>{
             console.log(res.data);
             setData(res.data);
-      })
-    });
+		
+	}
     return(
 			<div className="product">
         {
